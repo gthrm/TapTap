@@ -46,7 +46,7 @@ export default class App extends Component {
                 } else if (gestureState.dx < -120) {
                     Animated.spring(
                         this.position, {
-                            toValue: { x: -width + 100, y: gestureState.dy }
+                            toValue: { x: -width - 100, y: gestureState.dy }
                         }
                     ).start(() => {
                         this.setState({ curentIndex: this.state.curentIndex + 1 }, () => {
